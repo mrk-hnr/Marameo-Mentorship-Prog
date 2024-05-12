@@ -492,17 +492,18 @@ a {
   cursor: pointer;
 }
 
-.accordion.open p {
+.accordion.active p {
   color: #214A99;
 }
-.accordion.open i {
+.accordion.active i {
   color: #70278A;
 }
 
-.accordComplete.open {
+.accordComplete.active {
   background: #F4F4F4;
 }
-.accordComplete.open .accordDesc.open {
+.accordComplete.active .accordDesc.active {
+  display: block;
   margin: 0 2rem 0 1.2rem;
   font-size: 1.8rem;
   font-weight: 400;
@@ -511,13 +512,16 @@ a {
   padding-bottom: 1.2rem;
 }
 
-.accordComplete.close {
+.accordComplete {
   background: rgba(244, 244, 244, 0.1019607843);
 }
-.accordComplete.close .accordDesc.close {
+.accordComplete p {
+  color: white;
+}
+.accordComplete .accordDesc {
   display: none;
 }
-.accordComplete.close i {
+.accordComplete i {
   color: white;
 }
 
@@ -528,6 +532,9 @@ a {
   .leftCTA {
     text-align: center;
     margin-bottom: -1rem;
+  }
+  .rightCTA {
+    margin: -100rem !important;
   }
   .rightAbout {
     margin-top: 3rem;

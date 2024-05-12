@@ -41,7 +41,6 @@
         margin: 1.2rem 1.6rem;
 
         p {
-
             font-family: $BarlowCondensed;
             font-size: 1.8rem;
             font-weight: 700;
@@ -53,11 +52,10 @@
             font-size: 2rem;
             margin: 1.2rem;
             cursor: pointer;
-
         }
 }
 
-.accordion.open {
+.accordion.active {
     p {
         color: $blueButton;
     }
@@ -68,26 +66,30 @@
 }
 
 // When Accordion is opened
-.accordComplete.open {
+.accordComplete.active {
     background: #F4F4F4;
-
-    .accordDesc.open {
+    
+    .accordDesc.active {
+        display: block;
         margin: 0 2rem 0 1.2rem;
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 2.4rem;
         color: #333333;
         padding-bottom: 1.2rem;
-
     }
 }
 
 // When Accordion is closed
-.accordComplete.close {
+.accordComplete {
     background: #F4F4F41A;
 
-    .accordDesc.close {
+    p {
+        color: white;
+    }
+    .accordDesc {
         display: none;
+
     }
 
     i {
@@ -105,7 +107,9 @@
         margin-bottom: -1rem;
     }
 
-    
+    .rightCTA {
+        margin: -100rem !important;
+    }
 
     .rightAbout {
         margin-top: 3rem;
