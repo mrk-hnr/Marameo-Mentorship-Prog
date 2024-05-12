@@ -1,0 +1,82 @@
+.heroContainer {
+    background: url(../images/hero.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 70vh;
+    min-height: 50rem;
+    position: relative;
+}
+
+.heroIntro {
+    background: white;
+    width: 50%;
+    max-width: 60rem;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    padding: 1rem 2rem;
+    font-family: $BarlowCondensed;
+
+    h1 {
+        font-weight: 700;
+        font-size: 4.8rem;
+        font-weight: 700;
+        letter-spacing: -.1rem;
+        line-height: 5rem;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-family: $Barlow;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        padding: 3.2rem 0;
+    }
+
+    button {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2.4rem;
+        letter-spacing: .02rem;
+        text-transform: uppercase;
+        padding: 1.6rem 3.6rem;
+        height: 5.6rem;
+        background: $blueButton;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .bottomHero-container {
+        margin: 2rem 0;
+        line-height: 1.8rem;
+        letter-spacing: .2rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        color: #707070;
+
+        i {
+            padding: 0 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+}
+
+@media(max-width: 1000px) {
+
+    .heroContainer {
+        position: static;        
+        display: flex;
+        text-align: center;        
+        align-items: center;
+        height: 10vh;
+    }
+    .heroIntro {
+        position: static;        
+        margin: 0 auto;
+    }
+}

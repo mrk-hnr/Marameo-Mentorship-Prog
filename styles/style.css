@@ -1,0 +1,666 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Barlow Condensed, sans-serif;
+  margin: 0 auto;
+  min-width: 450px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* header{
+    background-color: #e1e1e1;
+} */
+.container {
+  padding: 0 7rem;
+  font-family: "Barlow", sans-serif;
+}
+.container .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-branding img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  background: rgb(255, 255, 255);
+}
+.nav-menu .nav-item {
+  display: flex;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  height: 5rem;
+  margin: 0 auto;
+  align-items: center;
+}
+.nav-menu .nav-item:hover {
+  background: rgb(231, 231, 231);
+}
+
+.nav-item .nav-link {
+  transition: 0.3s ease-out;
+}
+
+.blueButton {
+  width: 15rem;
+  height: 3.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #214A99;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown .dropdown-content a:hover {
+  color: #214A99;
+  background: rgb(230, 230, 230);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.arrow {
+  border: 1px solid #707070;
+  border-width: 0 0.3rem 0.3rem 0;
+  display: inline-block;
+  padding: 0.3rem;
+  margin-bottom: 0.2rem;
+  margin-left: 0.5rem;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  color: #707070;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+  background-color: black;
+}
+
+@media (max-width: 870px) {
+  .nav-item a, .nav-item span {
+    font-size: 1rem;
+  }
+  .blueButton {
+    font-size: 1rem;
+  }
+  .arrow {
+    padding: 0.2rem;
+  }
+}
+@media (max-width: 750px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    /* background-color: #262626; */
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    margin-top: -2.5rem;
+    padding-bottom: 1rem;
+    background: rgb(230, 230, 230);
+  }
+  .nav-menu .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .dropdown-content > li > a:hover {
+    display: block;
+    justify-content: center;
+  }
+}
+.heroContainer {
+  background: url(../images/hero.jpg);
+  background-size: cover;
+  height: 70vh;
+  min-height: 50rem;
+  position: relative;
+}
+
+.heroIntro {
+  background: white;
+  width: 50%;
+  max-width: 60rem;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  padding: 1rem 2rem;
+  font-family: "Barlow Condensed", sans-serif;
+}
+.heroIntro h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  font-weight: 700;
+  letter-spacing: -0.1rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+}
+.heroIntro p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  padding: 3.2rem 0;
+}
+.heroIntro button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  padding: 1.6rem 3.6rem;
+  height: 5.6rem;
+  background: #214A99;
+  color: white;
+  cursor: pointer;
+}
+.heroIntro .bottomHero-container {
+  margin: 2rem 0;
+  line-height: 1.8rem;
+  letter-spacing: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  color: #707070;
+}
+.heroIntro .bottomHero-container i {
+  padding: 0 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .heroContainer {
+    position: static;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 10vh;
+  }
+  .heroIntro {
+    position: static;
+    margin: 0 auto;
+  }
+}
+.sepsisContainer {
+  background: #214A99;
+  padding: 0 7rem;
+  font-family: Barlo;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.descriptionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5rem;
+  color: white;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+.descriptionContainer .leftDesc {
+  width: 80%;
+}
+
+.leftDesc {
+  font-family: "Barlow Condensed", sans-serif;
+}
+.leftDesc h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  letter-spacing: -0.1rem;
+}
+.leftDesc p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  margin: 1rem 0 2.5rem 0;
+}
+
+.rightDesc {
+  font-family: "Barlow Condensed", sans-serif;
+  cursor: pointer;
+  height: 100%;
+}
+.rightDesc span {
+  font-size: 1.8rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.card {
+  background: white;
+  width: 31rem;
+  padding-bottom: 2rem;
+}
+.card img {
+  width: 100%;
+  height: 22rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 3.6rem;
+  letter-spacing: -0.1rem;
+  padding: 0 2rem;
+}
+.card p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin: 1.5rem 0;
+  padding: 0 2rem;
+}
+.card span {
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  letter-spacing: 0.2rem;
+  padding: 0 2rem;
+  color: #214A99;
+  cursor: pointer;
+  padding: 2rem 2rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 725px) {
+  .sepsisContainer {
+    padding: 0 2.5rem;
+  }
+  .descriptionContainer {
+    justify-content: center;
+  }
+  .descriptionContainer .leftDesc {
+    text-align: center;
+    width: 100%;
+  }
+  .descriptionContainer .rightDesc {
+    margin-top: 2.5rem;
+    width: 30%;
+    height: 10%;
+  }
+}
+.aboutContainer {
+  padding: 0 7rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Barlow Condensed", sans-serif;
+  margin-bottom: 4.5rem;
+}
+.aboutContainer .leftAbout, .aboutContainer .rightAbout {
+  flex: 1;
+}
+
+.leftAbout {
+  text-align: center;
+}
+.leftAbout img {
+  width: 90%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.rightAbout span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #214A99;
+}
+.rightAbout h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.4rem;
+  letter-spacing: -0.1rem;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+.rightAbout p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+}
+.rightAbout button {
+  margin-top: 3.2rem;
+  width: 18rem;
+  height: 5.5rem;
+  background: none;
+  border-radius: 0;
+  border: 2px solid #214A99;
+  color: #214A99;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .aboutContainer {
+    flex-direction: column;
+  }
+}
+.ctaContainer {
+  margin: 0 3.5rem;
+  background: #214A99;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Barlow Condensed", sans-serif;
+  z-index: -111;
+}
+.ctaContainer .leftCTA, .ctaContainer .rightCTA {
+  flex: 1;
+  margin: 4rem;
+}
+
+.leftCTA h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.4rem;
+  letter-spacing: -0.1rem;
+  color: white;
+  text-transform: uppercase;
+}
+.leftCTA p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: white;
+}
+
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.2rem 1.6rem;
+}
+.accordion p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.4;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+.accordion i {
+  font-size: 2rem;
+  margin: 1.2rem;
+  cursor: pointer;
+}
+
+.accordion.open p {
+  color: #214A99;
+}
+.accordion.open i {
+  color: #70278A;
+}
+
+.accordComplete.open {
+  background: #F4F4F4;
+}
+.accordComplete.open .accordDesc.open {
+  margin: 0 2rem 0 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #333333;
+  padding-bottom: 1.2rem;
+}
+
+.accordComplete.close {
+  background: rgba(244, 244, 244, 0.1019607843);
+}
+.accordComplete.close .accordDesc.close {
+  display: none;
+}
+.accordComplete.close i {
+  color: white;
+}
+
+@media (max-width: 850px) {
+  .ctaContainer {
+    flex-direction: column;
+  }
+  .leftCTA {
+    text-align: center;
+    margin-bottom: -1rem;
+  }
+  .rightAbout {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 1000px) {
+  .rightAbout {
+    text-align: center;
+    margin-top: 3rem;
+  }
+}
+.gray {
+  width: 100%;
+  height: 25vh;
+  background: #E8E8E8;
+  margin-top: -10rem;
+  z-index: -9999 !important;
+  position: absolute !important;
+}
+
+.forFlex-footer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E8E8E8;
+  position: relative;
+  font-family: "Barlow Condensed", sans-serif;
+  padding-bottom: 1rem;
+}
+.forFlex-footer div {
+  flex: 1;
+  padding-top: 2rem;
+}
+
+.leftFooter {
+  margin-left: 7rem;
+  display: flex;
+  justify-content: space-around;
+}
+.leftFooter p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #214A99;
+  margin-bottom: 1.6rem;
+}
+.leftFooter li {
+  margin: 0.5rem 0;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #707070;
+  cursor: pointer;
+}
+
+.middleFooter {
+  margin-top: -1.5rem;
+}
+.middleFooter .middleFooter-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  letter-spacing: 0.2rem;
+  color: #214A99;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+.middleFooter .middleFooter-desc {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  font-family: "Barlow", sans-serif;
+  color: #333333;
+}
+
+.rightFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.rightFooter i {
+  background: white;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  padding: 0 1rem;
+  padding-top: 1.3rem;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.bottomFooter {
+  background: #E8E8E8;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 7rem;
+  font-family: "Barlow", sans-serif;
+  color: #707070;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+.bottomFooter span {
+  color: #333333;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .forFlex-footer {
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .leftFooter {
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .middleFooter {
+    margin: 0 auto;
+    padding: 0 5rem;
+  }
+  .bottomFooter {
+    flex-direction: column;
+    text-align: center;
+  }
+  .bottomFooter div {
+    margin: 0.5rem 0;
+  }
+}/*# sourceMappingURL=style.css.map */
