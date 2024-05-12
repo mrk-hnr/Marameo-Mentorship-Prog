@@ -9,6 +9,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -373,6 +374,9 @@ a {
     margin-top: 2.5rem;
     width: 30%;
     height: 10%;
+  }
+  .descriptionContainer .rightDesc span {
+    font-size: 1.5rem;
   }
 }
 .aboutContainer {

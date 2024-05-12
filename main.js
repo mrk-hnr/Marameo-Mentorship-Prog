@@ -3,6 +3,7 @@ const navMenu = document.querySelector(".nav-menu");
 const accordComplete = document.querySelectorAll(".accordComplete")
 const accordion = document.querySelectorAll(".accordion")
 const accordDesc = document.querySelectorAll(".accordDesc")
+const accordStatus = document.querySelectorAll("accordStatus")
 
 
 hamburger.addEventListener("click", () => {
@@ -23,13 +24,16 @@ function newToggle() {
     accordComplete[i].addEventListener("click", toggleActive)
     accordion[i].addEventListener("click", toggleActive)
     accordDesc[i].addEventListener("click", toggleActive)
+
+    
   }
 }
 
 function toggleActive() {
   this.classList.toggle("active")
-  this.classList.toggle("")
+  this.classList.toggle(null)
 }
+
 
 newToggle()
 
@@ -62,4 +66,3 @@ function changeClass(elem) {
 
 // Displays year for Footer
 document.querySelector("#year").textContent = new Date().getFullYear();
-

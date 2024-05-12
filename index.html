@@ -18,16 +18,16 @@
               <a href="/" class="nav-branding"><img src="./images/WP_logo.PNG" alt=""></a>
               <ul class="nav-menu">
                 <li class="nav-item">
-                  <a href="about" class="nav-link">About Us</a>
+                  <a href="#about" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a href="work" class="nav-link">Our Work</a>
+                  <a href="#work" class="nav-link">Our Work</a>
                 </li>
                 <li class="nav-item">
                   <span href="newsevents" class="nav-link dropdown">News and Events <i class="arrow down"></i>
                     <ul class="dropdown-content">
-                        <li><a href="news">News</a></li>
-                        <li><a href="events">Events</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#events">Events</a></li>
                     </ul>
                   </span>
                     
@@ -62,8 +62,8 @@
                 </section>
                 
             </section>
-            <section class="sepsisContainer">
-                <section class="descriptionContainer">
+            <section class="sepsisContainer" id="news">
+                <section class="descriptionContainer" id="events">
                     <div class="leftDesc">
                         <h2>
                             What will advance your career?
@@ -105,7 +105,7 @@
                 </section>
                 
             </section>
-            <section class="aboutContainer">
+            <section class="aboutContainer" id="about">
                 <section class="leftAbout">
                     <img src="./images/about.jpg" alt="Image of a neon hardware or a hardware that glows in the dark">
 
@@ -123,7 +123,7 @@
                     <button>CTA Secondary</button>
                 </section>
             </section>
-            <section class="ctaContainer">
+            <section class="ctaContainer" id="work">
                 <section class="leftCTA">
                     <h2>Join Us Today to make a difference in the web development world</h2>
 
@@ -133,7 +133,7 @@
                 <section class="rightCTA">
                     <section class="accordComplete active">
                         <div class="accordion active" onClick="changeClass(this)">
-                            <p class="accordTitle">Accordion Open</p>
+                            <p class="accordTitle">Accordion <span class="accordStatus">Open</span></p>
                             <i class="active fa-solid fa-minus"></i>
                         </div>
                         <p class="accordDesc active">
@@ -143,7 +143,7 @@
 
                     <section class="accordComplete">
                         <div class="accordion" onClick="changeClass(this)">
-                            <p>Accordion Close</p>
+                            <p>Accordion <span class="accordStatus">Close</span></p>
                             <i class="fa-solid fa-plus"></i>
                         </div>
 
@@ -152,7 +152,7 @@
                     
                     <section class="accordComplete">
                         <div class="accordion" onClick="changeClass(this)">
-                            <p>Accordion Close</p>
+                            <p>Accordion <span class="accordStatus">Close</span></p>
                             <i class="fa-solid fa-plus"></i>
                         </div>
 
@@ -168,8 +168,8 @@
                         <div class="innerLeft-footer">
                             <p>Quick Links</p>
                             <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Our Work</a></li>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#work">Our Work</a></li>
                                 <li><a href="#">Contact Us</a></li>
                                 <li><a href="#">Resource Hub</a></li>
                             </ul>
