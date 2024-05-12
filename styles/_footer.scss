@@ -8,8 +8,14 @@
     position: absolute !important;
 }
 
+// footer {
+//     position: absolute;
+//     bottom: 0;
+//     overflow: hidden;
+// }
 .forFlex-footer {
-    height: 100%;
+    
+    
     display: flex;
     // flex-wrap: wrap;
     justify-content: center;
@@ -122,7 +128,10 @@
 
 
 @media(max-width: 800px) {
+
+
     .forFlex-footer {
+        
         flex-direction: column;
         margin: 0 auto;
         text-align: center;
